@@ -19,7 +19,7 @@ class Driver():
    *
    * @return boolean value that represents the validity of the user entered input.
    */
-  private def validityCheck(checkVal: Int): Boolean =
+  def validityCheck(checkVal: Int): Boolean =
     if checkVal > 0 then true else false
 
   /** Returns the minimum number of shards that need to be created.
@@ -33,7 +33,7 @@ class Driver():
    *
    * @return the minimum number of shards that the data must be split into.
    */
-  private def getMinShards: Int =
+  def getMinShards: Int =
     if validityCheck(LSCGSParams.minNoOfShards) then LSCGSParams.minNoOfShards else
       logger.info(s"Minimum number of shards set by user = ${LSCGSParams.minNoOfShards}")
       logger.info(s"Using Default Value = ${LSCGSParams.minNoOfShards_DEFAULT}")
@@ -50,7 +50,7 @@ class Driver():
    *
    * @return the maximum number of shards that the data must be split into.
    */
-  private def getMaxShards: Int =
+  def getMaxShards: Int =
     if validityCheck(LSCGSParams.maxNoOfShards) then LSCGSParams.maxNoOfShards else
       logger.info(s"Maximum number of shards set by user = ${LSCGSParams.maxNoOfShards}")
       logger.info(s"Using Default Value = ${LSCGSParams.maxNoOfShards_DEFAULT}")
@@ -67,7 +67,7 @@ class Driver():
    *
    * @return the min length of the raw input data provided to the sharder.
    */
-  private def getMinRawDataLength: Int =
+  def getMinRawDataLength: Int =
     if validityCheck(LSCGSParams.minRawDataLength) then LSCGSParams.minRawDataLength else
       logger.info(s"Minimum data length set by user = ${LSCGSParams.minRawDataLength}")
       logger.info(s"Using Default Value = ${LSCGSParams.minRawDataLength_DEFAULT}")
@@ -86,7 +86,7 @@ class Driver():
    * @param dataLength : Int : Represents the length of the input data that needs to be sharded.
    * @return an Integer that represents the step that must be used to shard the data.
    */
-  private def generateShardingStep(dataLength: Int): Int =
+  def generateShardingStep(dataLength: Int): Int =
     if dataLength <= getMinRawDataLength then
       dataLength / getMinShards
     else

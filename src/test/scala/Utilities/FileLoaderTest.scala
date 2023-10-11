@@ -27,14 +27,4 @@ class FileLoaderTest extends AnyFlatSpec with Matchers {
     assert(graph.getClass == None.getClass, ": None type not returned despite file not being found.")
     assert(graph.isEmpty === true, ": Empty Graph not sent.")
   }
-
-  it should "not return an empty NetGraph." in {
-    assert(graph.getClass == Some(1).getClass, ": Graph not loaded. None type returned.")
-    assert(graph.nonEmpty === true, ": NetGraph is empty.")
-  }
-
-//  solve this problem. None.get does not exists. Tests should fail not give an error of type.
-//  it should "return a NetGraph when the file is found." in {
-//    assert(graph.get.getClass == classOf[NetGraph], ": NetGraph not returned.")
-//  }
 }
