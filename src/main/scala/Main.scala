@@ -91,12 +91,6 @@ object Main:
       logger.info("Now using these sharded data files with the MapReduce Algorithm to produce similarity pairs.")
       MapReduce.Jobs()
 
-      logger.info("Now loading and rendering the results of the MapReduce algorithm to YAML files.")
-//      val results =
-
-      logger.info("Comparing the results of the Large Scale Computation YAML file and NetGameSim YAML file.")
-//      val accuracy =
-
     else
       logger.error("Either the Original or Perturbed Graph is empty.")
       logger.error("Since either of the graphs are empty, the similarity cannot be computed.")
