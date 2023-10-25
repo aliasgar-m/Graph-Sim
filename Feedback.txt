@@ -1,0 +1,7 @@
+Student - Aliasgar Merchant
+
+No Metrics/AWS deployment/Video = -0.5%
+
+Good execution! I like how clear your documentation is too. I would've liked to see this run on EMR though.
+
+Grade = 14.5%
